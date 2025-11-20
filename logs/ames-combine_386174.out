@@ -1,0 +1,45 @@
+Combining scenario results on host ndstd084
+✓ Combined results saved to: /lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/results/Ames_Housing_combined_benchmark_results.csv
+
+-------------------------📊 COMBINED ANALYSIS--------------------------
+
+Best Performance by Scenario (RMSE):
+S1_No_Selection_No_Encoding: OrdinalEncoder + XGBoost → RMSE 23,241 (R² 0.915)
+S2_No_Selection_With_Encoding: GLMMEncoder + CatBoost → RMSE 22,755 (R² 0.918)
+S3_With_Boruta_No_Encoding: OrdinalEncoder + XGBoost → RMSE 23,277 (R² 0.914)
+S4_With_Boruta_With_Encoding: GLMMEncoder + CatBoost → RMSE 22,721 (R² 0.918)
+
+Best Performance by Scenario (R²):
+S1_No_Selection_No_Encoding: OrdinalEncoder + XGBoost → R² 0.915 (RMSE 23,241)
+S2_No_Selection_With_Encoding: GLMMEncoder + CatBoost → R² 0.918 (RMSE 22,755)
+S3_With_Boruta_No_Encoding: OrdinalEncoder + XGBoost → R² 0.914 (RMSE 23,277)
+S4_With_Boruta_With_Encoding: GLMMEncoder + CatBoost → R² 0.918 (RMSE 22,721)
+
+Scenario Comparison (Average RMSE):
+  S4_With_Boruta_With_Encoding: 24,956
+  S3_With_Boruta_No_Encoding: 25,181
+  S2_No_Selection_With_Encoding: 25,384
+  S1_No_Selection_No_Encoding: 25,444
+
+Scenario Comparison (Average R²):
+  S4_With_Boruta_With_Encoding: 0.900
+  S3_With_Boruta_No_Encoding: 0.898
+  S2_No_Selection_With_Encoding: 0.897
+  S1_No_Selection_No_Encoding: 0.896
+
+Feature Selection Impact (Boruta):
+  RMSE  — With: 25,001 | Without: 25,396
+  R²    — With: 0.900 | Without: 0.896
+
+Encoding Impact:
+  RMSE  — With: 25,170 | Without: 25,312
+  R²    — With: 0.898 | Without: 0.897
+
+Global Best:
+  RMSE → GLMMEncoder + CatBoost in S4_With_Boruta_With_Encoding (RMSE 22,721, R² 0.918)
+  R²   → GLMMEncoder + CatBoost in S4_With_Boruta_With_Encoding (R² 0.918, RMSE 22,721)
+
+RMSE–R² correlation: -0.998 (expect strong negative)
+
+-----------------------📈 COMBINED VISUALIZATION-----------------------
+✓ Combined RMSE & R² visualization saved to '/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/results/Ames_Housing_four_scenario_comparison_RMSE_R2.png'

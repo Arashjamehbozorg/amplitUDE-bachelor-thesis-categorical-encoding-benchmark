@@ -1,0 +1,993 @@
+Running scenario 3 on host ndstd056
+
+======================🔬 ENCODING BENCHMARK SUITE======================
+Running benchmarks on 1 dataset(s)
+
+
+▶️                         DATASET: Ames_Housing                        
+======================================================================
+Starting 4-scenario benchmark...
+
+Running Scenario 4: With Boruta and encoding
+  Testing: Ridge + TargetEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=Ridge | enc=TargetEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: RandomForest + TargetEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=RandomForest | enc=TargetEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: XGBoost + TargetEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=XGBoost | enc=TargetEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: CatBoost + TargetEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=CatBoost | enc=TargetEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: gbr + TargetEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=gbr | enc=TargetEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: ExtraTrees + TargetEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=ExtraTrees | enc=TargetEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: LGBM + TargetEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=LGBM | enc=TargetEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: Ridge + CatBoostEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=Ridge | enc=CatBoostEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: RandomForest + CatBoostEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=RandomForest | enc=CatBoostEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: XGBoost + CatBoostEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=XGBoost | enc=CatBoostEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: CatBoost + CatBoostEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=CatBoost | enc=CatBoostEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: gbr + CatBoostEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=gbr | enc=CatBoostEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: ExtraTrees + CatBoostEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=ExtraTrees | enc=CatBoostEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: LGBM + CatBoostEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=LGBM | enc=CatBoostEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: Ridge + JamesSteinEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=Ridge | enc=JamesSteinEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: RandomForest + JamesSteinEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=RandomForest | enc=JamesSteinEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: XGBoost + JamesSteinEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=XGBoost | enc=JamesSteinEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: CatBoost + JamesSteinEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=CatBoost | enc=JamesSteinEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: gbr + JamesSteinEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=gbr | enc=JamesSteinEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: ExtraTrees + JamesSteinEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=ExtraTrees | enc=JamesSteinEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: LGBM + JamesSteinEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=LGBM | enc=JamesSteinEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: Ridge + GLMMEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=Ridge | enc=GLMMEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: RandomForest + GLMMEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=RandomForest | enc=GLMMEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: XGBoost + GLMMEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=XGBoost | enc=GLMMEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: CatBoost + GLMMEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=CatBoost | enc=GLMMEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: gbr + GLMMEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=gbr | enc=GLMMEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: ExtraTrees + GLMMEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=ExtraTrees | enc=GLMMEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  Testing: LGBM + GLMMEncoder (Boruta)
+❌ Failure in S4_With_Boruta_With_Encoding | alg=LGBM | enc=GLMMEncoder | apply_encoding=True
+Reason: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 329, in evaluate_combination_nested
+    pipe.fit(X_train, y_train)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1474, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 471, in fit
+    Xt = self._fit(X, y, routed_params)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 408, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/pipeline.py", line 1303, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/utils/_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/sklearn/base.py", line 1101, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 143, in fit
+    self._boruta.fit(X_arr, y_arr)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 201, in fit
+    return self._fit(X, y)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/boruta/boruta_py.py", line 319, in _fit
+    self.support_ = np.zeros(n_feat, dtype=np.bool)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'bool'.
+`np.bool` was a deprecated alias for the builtin `bool`. To avoid this error in existing code, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+⏱ S4 done in 8.1 min
+

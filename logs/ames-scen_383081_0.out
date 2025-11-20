@@ -1,0 +1,12 @@
+Running scenario 0 on host ndstd066
+
+======================🔬 ENCODING BENCHMARK SUITE======================
+Running benchmarks on 1 dataset(s)
+
+
+▶️                         DATASET: Ames_Housing                        
+======================================================================
+Starting 4-scenario benchmark...
+
+Running Scenario 1: No feature selection and no encoding
+  Testing: Ridge (OrdinalEncoder only)

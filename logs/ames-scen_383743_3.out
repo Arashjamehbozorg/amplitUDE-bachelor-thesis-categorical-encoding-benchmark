@@ -1,0 +1,78 @@
+Running scenario 3 on host ndstd141
+
+======================🔬 ENCODING BENCHMARK SUITE======================
+Running benchmarks on 1 dataset(s)
+
+
+▶️                         DATASET: Ames_Housing                        
+======================================================================
+Starting 4-scenario benchmark...
+
+Running Scenario 4: With Boruta and encoding
+  Testing: Ridge + TargetEncoder (Boruta)
+  Testing: RandomForest + TargetEncoder (Boruta)
+  Testing: XGBoost + TargetEncoder (Boruta)
+  Testing: CatBoost + TargetEncoder (Boruta)
+  Testing: gbr + TargetEncoder (Boruta)
+  Testing: ExtraTrees + TargetEncoder (Boruta)
+  Testing: LGBM + TargetEncoder (Boruta)
+  Testing: Ridge + CatBoostEncoder (Boruta)
+  Testing: RandomForest + CatBoostEncoder (Boruta)
+  Testing: XGBoost + CatBoostEncoder (Boruta)
+  Testing: CatBoost + CatBoostEncoder (Boruta)
+  Testing: gbr + CatBoostEncoder (Boruta)
+  Testing: ExtraTrees + CatBoostEncoder (Boruta)
+  Testing: LGBM + CatBoostEncoder (Boruta)
+  Testing: Ridge + JamesSteinEncoder (Boruta)
+  Testing: RandomForest + JamesSteinEncoder (Boruta)
+  Testing: XGBoost + JamesSteinEncoder (Boruta)
+  Testing: CatBoost + JamesSteinEncoder (Boruta)
+  Testing: gbr + JamesSteinEncoder (Boruta)
+  Testing: ExtraTrees + JamesSteinEncoder (Boruta)
+  Testing: LGBM + JamesSteinEncoder (Boruta)
+  Testing: Ridge + GLMMEncoder (Boruta)
+  Testing: RandomForest + GLMMEncoder (Boruta)
+  Testing: XGBoost + GLMMEncoder (Boruta)
+  Testing: CatBoost + GLMMEncoder (Boruta)
+  Testing: gbr + GLMMEncoder (Boruta)
+  Testing: ExtraTrees + GLMMEncoder (Boruta)
+  Testing: LGBM + GLMMEncoder (Boruta)
+⏱ S4 done in 342.1 min
+
+
+------------------------------📊 ANALYSIS------------------------------
+
+Best Performance by Scenario (RMSE):
+S4_With_Boruta_With_Encoding: GLMMEncoder + CatBoost → RMSE 22,721 (R² 0.918)
+
+Best Performance by Scenario (R²):
+S4_With_Boruta_With_Encoding: GLMMEncoder + CatBoost → R² 0.918 (RMSE 22,721)
+
+Scenario Comparison (Average RMSE):
+  S4_With_Boruta_With_Encoding: 24,956
+
+Scenario Comparison (Average R²):
+  S4_With_Boruta_With_Encoding: 0.900
+
+Feature Selection Impact (Boruta):
+  RMSE  — With: 24,956 | Without: nan
+  R²    — With: 0.900 | Without: nan
+
+Encoding Impact:
+  RMSE  — With: 24,956 | Without: nan
+  R²    — With: 0.900 | Without: nan
+
+Global Best:
+  RMSE → GLMMEncoder + CatBoost in S4_With_Boruta_With_Encoding (RMSE 22,721, R² 0.918)
+  R²   → GLMMEncoder + CatBoost in S4_With_Boruta_With_Encoding (R² 0.918, RMSE 22,721)
+
+RMSE–R² correlation: -0.998 (expect strong negative)
+
+---------------------------📈 VISUALIZATION----------------------------
+✓ Combined RMSE & R² visualization saved to '/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/results/Ames_Housing_scenario_3_four_scenario_comparison_RMSE_R2.png'
+✓ Results saved to: /lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/results/Ames_Housing_scenario_3_benchmark_results.csv
+
+=========================✅ BENCHMARK COMPLETE=========================
+
+
+🎉 ALL BENCHMARKS COMPLETED!
