@@ -1,0 +1,34 @@
+/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py:22: FutureWarning: In the future `np.bool` will be defined as the corresponding NumPy scalar.
+  if not hasattr(np, "bool"):
+/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/lib/function_base.py:2889: RuntimeWarning: Degrees of freedom <= 0 for slice
+  c = cov(x, y, rowvar, dtype=dtype)
+/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/lib/function_base.py:2748: RuntimeWarning: divide by zero encountered in divide
+  c *= np.true_divide(1, fact)
+/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/numpy/lib/function_base.py:2748: RuntimeWarning: invalid value encountered in multiply
+  c *= np.true_divide(1, fact)
+Traceback (most recent call last):
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 643, in <module>
+    main(scenario_id=args.scenario_id)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 614, in main
+    bench.visualize_results(results, dataset_name=ds_name_for_plot)
+  File "/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py", line 579, in visualize_results
+    plt.savefig(out, dpi=300, bbox_inches='tight'); plt.show()
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/matplotlib/pyplot.py", line 1134, in savefig
+    res = fig.savefig(*args, **kwargs)  # type: ignore[func-returns-value]
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/matplotlib/figure.py", line 3390, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/matplotlib/backend_bases.py", line 2193, in print_figure
+    result = print_method(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/matplotlib/backend_bases.py", line 2043, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 497, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 446, in _print_pil
+    mpl.image.imsave(
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/matplotlib/image.py", line 1656, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/lustre/scratch/soarjame-bachelor-thesis/envs/mlenv/lib64/python3.9/site-packages/PIL/Image.py", line 2583, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '../results/Ames_Housing_scenario_2_four_scenario_comparison_RMSE_R2.png'
+srun: error: ndstd053: task 0: Exited with exit code 1
+srun: Terminating StepId=383089.0

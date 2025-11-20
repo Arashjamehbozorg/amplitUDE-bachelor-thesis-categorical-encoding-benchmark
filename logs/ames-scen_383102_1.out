@@ -1,0 +1,52 @@
+Running scenario 1 on host ndstd053
+
+======================🔬 ENCODING BENCHMARK SUITE======================
+Running benchmarks on 1 dataset(s)
+
+
+▶️                         DATASET: Ames_Housing                        
+======================================================================
+Starting 4-scenario benchmark...
+
+Running Scenario 2: No feature selection, with encoding
+  Testing: RandomForest + JamesSteinEncoder
+  Testing: RandomForest + GLMMEncoder
+⏱ S2 done in 0.1 min
+
+
+------------------------------📊 ANALYSIS------------------------------
+
+Best Performance by Scenario (RMSE):
+S2_No_Selection_With_Encoding: JamesSteinEncoder + RandomForest → RMSE 26,604 (R² 0.889)
+
+Best Performance by Scenario (R²):
+S2_No_Selection_With_Encoding: JamesSteinEncoder + RandomForest → R² 0.889 (RMSE 26,604)
+
+Scenario Comparison (Average RMSE):
+  S2_No_Selection_With_Encoding: 26,609
+
+Scenario Comparison (Average R²):
+  S2_No_Selection_With_Encoding: 0.889
+
+Feature Selection Impact (Boruta):
+  RMSE  — With: nan | Without: 26,609
+  R²    — With: nan | Without: 0.889
+
+Encoding Impact:
+  RMSE  — With: 26,609 | Without: nan
+  R²    — With: 0.889 | Without: nan
+
+Global Best:
+  RMSE → JamesSteinEncoder + RandomForest in S2_No_Selection_With_Encoding (RMSE 26,604, R² 0.889)
+  R²   → JamesSteinEncoder + RandomForest in S2_No_Selection_With_Encoding (R² 0.889, RMSE 26,604)
+
+RMSE–R² correlation: -1.000 (expect strong negative)
+
+---------------------------📈 VISUALIZATION----------------------------
+✓ Combined RMSE & R² visualization saved to '/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/results/Ames_Housing_scenario_1_four_scenario_comparison_RMSE_R2.png'
+✓ Results saved to: /lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/results/Ames_Housing_scenario_1_benchmark_results.csv
+
+=========================✅ BENCHMARK COMPLETE=========================
+
+
+🎉 ALL BENCHMARKS COMPLETED!

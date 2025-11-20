@@ -1,0 +1,4 @@
+/lustre/scratch/soarjame-bachelor-thesis/code/Boruta_Main_Amplitude/encoding_benchmark_defs.py:28: FutureWarning: In the future `np.bool` will be defined as the corresponding NumPy scalar.
+  if not hasattr(np, "bool"):
+slurmstepd: error: *** STEP 383742.0 ON ndstd018 CANCELLED AT 2025-11-16T19:22:10 ***
+slurmstepd: error: *** JOB 383742 ON ndstd018 CANCELLED AT 2025-11-16T19:22:10 ***

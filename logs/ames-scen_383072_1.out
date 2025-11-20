@@ -1,0 +1,12 @@
+Running scenario 1 on host ndstd053
+
+======================🔬 ENCODING BENCHMARK SUITE======================
+Running benchmarks on 1 dataset(s)
+
+
+▶️                         DATASET: Ames_Housing                        
+======================================================================
+Starting 4-scenario benchmark...
+
+Running Scenario 2: No feature selection, with encoding
+  Testing: Ridge + TargetEncoder
